@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment</title>
+</head>
+<body>
+    <script>
+        // Step 1: Prompt for number of courses
+        let numOfCourses = prompt("How many courses did you finish?", "0");
+        numOfCourses = parseInt(numOfCourses);
+
+        // Validate the input
+        if (isNaN(numOfCourses) || numOfCourses <= 0) {
+            document.write("<p>Invalid Input!</p>");
+        } else {
+            // Step 2: Collect course marks
+            let courseMarks = []; // Empty array to store marks
+            let total = 0; // Variable to store total marks
+            let validInput = true; // A flag to track if all inputs are valid
+
+            for (let i = 1; i <= numOfCourses; i++) {
+                let mark = prompt(`Enter your mark for course ${i}:`);
+                mark = parseFloat(mark);
+
+                // Validate each mark
+                if (isNaN(mark) || mark < 0 || mark > 100) {
+                    document.write("<p>Invalid Input! Marks should be between 0 and 100.</p>");
+                    validInput = false; // Set the flag to false if input is invalid
+                    break; // Stop the loop if an invalid mark is entered
+                }
+
+                courseMarks.push(mark); // Add the mark to the array
+                total += mark; // Add the mark to the total
+            }
+
+            // Proceed only if all inputs were valid
+            if (validInput) {
+                // Step 3: Calculate average and determine grade
+                let average = total / courseMarks.length;
+                average = average.toFixed(2); // Round to 2 decimal places
+                let grade;
+
+                if (average >= 90 && average <= 100) {
+                    grade = "A+";
+                } else if (average >= 80 && average < 90) {
+                    grade = "B";
+                } else if (average >= 70 && average < 80) {
+                    grade = "C";
+                } else if (average >= 60 && average < 70) {
+                    grade = "D";
+                } else if (average < 60) {
+                    grade = "F";
+                } else {
+                    document.write("<p>Sorry, all the marks have to be from minimum 0 to maximum 100!</p>");
+                    validInput = false;
+                }
+
+                // Step 4: Display results
+                if (validInput) {
+                    document.write("<h3>Your Course Marks:</h3>");
+                    courseMarks.forEach((mark, index) => {
+                        document.write(`<p>Course ${index + 1}: ${mark}</p>`);
+                    });
+                    document.write(`<p>Your Average: ${average}</p>`);
+                    document.write(`<p>Your Grade: ${grade}</p>`);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
