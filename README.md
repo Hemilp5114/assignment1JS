@@ -20,4 +20,16 @@ o	F: Below 60
 
 Live Demo
 You can view the live demo of this project using GitHub Pages here:
+https://hemilp5114.github.io/assignment1JS/
+
+Technologies Used
+HTML5: For structuring the content.
+CSS: For basic internal styling.
+JavaScript: For logic, calculations, and interactivity.
+
+Folder Structure
+css
+Copy
+Edit
+index.html    // The main HTML file containing all code
 
