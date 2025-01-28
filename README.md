@@ -11,25 +11,18 @@ Features
 •	Dynamic Loops: Iterates based on the number of courses specified by the user.
 •	Array Usage: Stores course marks in an array for easy manipulation.
 •	Grade Assignment: Assigns grades as per the following scale:
-o	A+: 90–100
-o	B: 80–89
-o	C: 70–79
-o	D: 60–69
-o	F: Below 60
+•	A+: 90–100
+•	B: 80–89
+•	C: 70–79
+•	D: 60–69
+•	F: Below 60
 •	Final Display: Outputs all course marks, the calculated average (rounded to 2 decimal points), and the grade.
 
 Live Demo
 You can view the live demo of this project using GitHub Pages here:
 https://hemilp5114.github.io/assignment1JS/
 
-Technologies Used
-HTML5: For structuring the content.
-CSS: For basic internal styling.
-JavaScript: For logic, calculations, and interactivity.
 
-Folder Structure
-css
-Copy
-Edit
-index.html    // The main HTML file containing all code
+
+
 
